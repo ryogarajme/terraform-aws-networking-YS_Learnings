@@ -1,5 +1,6 @@
 
 variable "vpc_config" {
+  description = "Variable contains the VPC config. Contains cidr_block & VPC name"
   type = object({
     cidr_block = string
     name       = string
@@ -11,6 +12,7 @@ variable "vpc_config" {
 }
 
 variable "subnet_config" {
+  description = "Variable for Subnet config. Contains cidr_block, Az & access to public or not "
   type = map(object({
     cidr_block = string
     az         = string
